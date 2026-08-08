@@ -21,8 +21,7 @@ Domain: `goteborg.hemreform.se`
 The site currently serves **Swedish as default** with a client-side JavaScript switch to English  
 (via `data-en="…"` attributes on elements). The same URL serves both languages.
 
-**Planned:** A proper `/en/` subdirectory with separate English pages for full bilingual SEO.  
-Until that is implemented, every text change must update both:
+There are no separate English URLs. Every text change must update both:
 - The element's text node (Swedish default)
 - The `data-en="…"` attribute value (English)
 
@@ -99,10 +98,7 @@ Each page must have:
 - `<meta property="og:title">` and `<meta property="og:description">` — Swedish
 - `<meta name="twitter:description">` — English (for international reach)
 - `<link rel="canonical">` — exact URL of the page
-- `hreflang` tags — `sv` pointing to the Swedish URL, `en` to the English URL
-
-Until `/en/` pages exist, both hreflang tags can point to the same URL.  
-Once `/en/` exists, update hreflang on all pages to cross-reference correctly.
+- No English `hreflang` unless real English URLs exist.
 
 ---
 
